@@ -1,12 +1,12 @@
-﻿Console.WriteLine("Задача 38: Задайте массив вещественных чисел. ");
+﻿Console.Clear();
+Console.WriteLine("Задайте массив вещественных чисел. ");
 Console.WriteLine("Найдите разницу между максимальным и минимальным элементами массива.");
 
-Console.Write("- Введите количество элементов массива: ");
+Console.Write("Введите количество элементов массива: ");
 int length = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(""); 
 
-Console.Write("Массив вещественных чисел: "); Console.ForegroundColor = ConsoleColor.Yellow;
-Console.Write("[");
+Console.Write("Массив вещественных чисел: ");Console.ForegroundColor = ConsoleColor.White;
+
 double[] array = new double[length];
 Random rand = new Random(DateTime.Now.Millisecond);
 for (int i = 0; i < array.Length; i++)
