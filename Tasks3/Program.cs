@@ -1,6 +1,5 @@
 ﻿Console.WriteLine("Задача 38: Задайте массив вещественных чисел. ");
 Console.WriteLine("Найдите разницу между максимальным и минимальным элементами массива.");
-Console.WriteLine("________________________________________________________"); Console.WriteLine("");
 
 Console.Write("- Введите количество элементов массива: ");
 int length = Convert.ToInt32(Console.ReadLine());
