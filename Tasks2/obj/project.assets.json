@@ -8,24 +8,30 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\DIM\\.nuget\\packages\\": {}
+    "C:\\Users\\DIM\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\seminar2\\Tasks2\\Tasks2.csproj",
+      "projectUniqueName": "D:\\Seminar\\seminar5\\Tasks2\\Tasks2.csproj",
       "projectName": "Tasks2",
-      "projectPath": "D:\\seminar2\\Tasks2\\Tasks2.csproj",
+      "projectPath": "D:\\Seminar\\seminar5\\Tasks2\\Tasks2.csproj",
       "packagesPath": "C:\\Users\\DIM\\.nuget\\packages\\",
-      "outputPath": "D:\\seminar2\\Tasks2\\obj\\",
+      "outputPath": "D:\\Seminar\\seminar5\\Tasks2\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\DIM\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\DIM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
