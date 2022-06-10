@@ -1,22 +1,33 @@
-﻿Console.Clear();
-Console.WriteLine("Задайте массив вещественных чисел. ");
-Console.WriteLine("Найдите разницу между максимальным и минимальным элементами массива.");
+﻿int m = 3;
+int n = 2;
 
-Console.Write("Введите количество элементов массива: ");
-int length = Convert.ToInt32(Console.ReadLine());
+textTask();
+Console.Write($"n = {n}; m = {m} -> A(n, m) = {Ackerman(m, n)}\n");
+Console.WriteLine("\n");
+Console.ResetColor();
+Console.ReadKey();
 
-Console.Write("Массив вещественных чисел: ");Console.ForegroundColor = ConsoleColor.White;
-
-double[] array = new double[length];
-Random rand = new Random(DateTime.Now.Millisecond);
-for (int i = 0; i < array.Length; i++)
+static int Ackerman(int n, int m) // RECURSION
 {
-    array[i] = Math.Round((rand.NextDouble() * 200 - 100), 2);
-    Console.Write(array[i]);
-    if (i < length - 1 ) Console.Write("; ");
+    if (n == 0)
+        return m + 1;
+    if (n != 0 && m == 0)
+        return Ackerman(n - 1, 1);
+    if (n > 0 && m > 0)
+        return Ackerman(n - 1, Ackerman(n, m - 1));
+    return Ackerman(n, m);
 }
-double max = array[0]; double min = array[0];
-for (int i = 0; i < array.Length; i++)
+
+void textTask()
 {
-    if (max < array[i]) max = array[i];
+    Console.Clear();
+    Console.ForegroundColor = ConsoleColor.DarkYellow;
+    Console.WriteLine(new string('_', Console.WindowWidth));
+    Console.WriteLine(
+        "Знакомство с языками программирования. Семинар 9.\n"
+            + "\nЗадача 68: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n. \n"
+            + "m = 2, n = 3 -> A(n,m) = 29"
+    );
+    Console.WriteLine(new string('_', Console.WindowWidth) + "\n");
+    Console.ResetColor();
 }    
