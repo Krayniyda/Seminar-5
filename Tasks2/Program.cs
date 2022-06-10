@@ -1,28 +1,27 @@
-﻿Console.Clear();
-Console.WriteLine("Задайте одномерный массив, заполненный случайными числами."); 
-Console.WriteLine("Найдите сумму элементов, стоящих на нечётных позициях.");
+﻿int M = 1; int M1 = 4; 
+int N = 15; int N1 = 8;
 
-Console.Write("Введите количество элементов массива: ");
-int length = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(""); 
-int sum = 0;
+textTask(); 
+Console.Write($"M = {M}; N = {N} -> {SumNumbers(M, N)}\n");
+Console.Write($"M = {M1}; N = {N1} -> {SumNumbers(M1, N1)}\n");
+Console.WriteLine("\n"); Console.ResetColor(); Console.ReadKey();
 
-Console.Write("Одномерный массив, заполненный случайными числами: "); Console.ForegroundColor = ConsoleColor.Yellow;
-Console.Write("[");
-int[] array = new int[length];
-Random rand = new Random();
-for (int i = 0; i < array.Length; i++)
-{
-    array[i] = rand.Next(-99, 100);
-    Console.Write(array[i]);
-    if (i < length - 1 ) Console.Write("; ");
-    if (i % 2 != 0) sum += array[i];
+static int SumNumbers(int i, int n) // RECURSION
+{   int sum = i;
+    if (i < n) 
+    {
+        sum += SumNumbers(i + 1, n);
+    }
+    return sum;
 }
-Console.WriteLine("]"); Console.WriteLine(""); Console.ForegroundColor = ConsoleColor.White;
-Console.Write("Cумма элементов, стоящих на нечётных позициях: ");
-Console.ForegroundColor = ConsoleColor.Yellow;
-Console.WriteLine(sum);
-Console.ForegroundColor = ConsoleColor.White;
+
+void textTask()
+{Console.Clear(); Console.ForegroundColor = ConsoleColor.DarkYellow; Console.WriteLine(new string('_', Console.WindowWidth)); 
+Console.WriteLine("Знакомство с языками программирования. Семинар 9.\n" + 
+"\nЗадача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N. \n" +
+"M = 1; N = 15 -> 120 \n" + "M = 4; N = 8. -> 30");
+Console.WriteLine(new string('_', Console.WindowWidth) + "\n"); Console.ResetColor();
+}
 
 
 
